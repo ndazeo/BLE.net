@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{48788CDA-AD31-4D16-BA67-831D0F6897F1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>bluetooth</RootNamespace>
+    <AssemblyName>ble.net</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile7</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <OutputPath>..\..\artifacts\bin\$(MSBuildThisFileName)\$(Configuration)\$(Platform)</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="ble.net.nuspec" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ble\advertisement\AdvertisementAddress.cs" />
+    <Compile Include="ble\advertisement\AdvertisementData.cs" />
+    <Compile Include="ble\advertisement\AdvertisingChannelPDU.cs" />
+    <Compile Include="ble\advertisement\AdvertisingChannelPDUType.cs" />
+    <Compile Include="ble\advertisement\BleAdvertisingUtils.cs" />
+    <Compile Include="ble\BaseBluetoothLowEnergyAdapter.cs" />
+    <Compile Include="ble\BaseBluetoothLowEnergyPeripheral.cs" />
+    <Compile Include="ble\BluetoothLowEnergyUtils.cs" />
+    <Compile Include="ble\ConnectionState.cs" />
+    <Compile Include="ble\gatt\BaseGattCharacteristic.cs" />
+    <Compile Include="ble\gatt\BaseGattDescriptor.cs" />
+    <Compile Include="ble\gatt\BaseGattServerConnection.cs" />
+    <Compile Include="ble\gatt\CharacteristicProperty.cs" />
+    <Compile Include="ble\gatt\IGattAttribute.cs" />
+    <Compile Include="ble\gatt\IGattCharacteristic.cs" />
+    <Compile Include="ble\gatt\IGattDescriptor.cs" />
+    <Compile Include="ble\gatt\IGattServerConnection.cs" />
+    <Compile Include="ble\gatt\IGattService.cs" />
+    <Compile Include="ble\IBluetoothLowEnergyAdapter.cs" />
+    <Compile Include="ble\IBluetoothLowEnergyPeripheral.cs" />
+    <Compile Include="ble\ScanStopReason.cs" />
+    <Compile Include="BluetoothLinkLayerPacket.cs" />
+    <Compile Include="BluetoothUtils.cs" />
+    <Compile Include="BluetoothUuidAttribute.cs" />
+    <Compile Include="IAttAttribute.cs" />
+    <Compile Include="IBluetoothIdentifier.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="nexus.core">
+      <HintPath>..\..\lib\packages\nexus.core.0.11.3\lib\portable-net45+win+MonoAndroid10+xamarinios10+MonoTouch10\nexus.core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nexus.core.logging">
+      <HintPath>..\..\lib\packages\nexus.core.logging.0.11.3\lib\portable-net45+win+MonoAndroid10+xamarinios10+MonoTouch10\nexus.core.logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Target Name="AfterBuild" Condition=" '$(Configuration)' == 'Release'">
+    <Exec Command="..\..\build\package-nuget.bat">
+    </Exec>
+  </Target>
+</Project>

@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ble.net", "src\ble.net\ble.net.csproj", "{48788CDA-AD31-4D16-BA67-831D0F6897F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{89014F7A-2A01-4A85-9F3C-737316A7B0D2}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		build\package-nuget.bat = build\package-nuget.bat
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ble.net-ios", "src\ble.net-ios\ble.net-ios.csproj", "{B912B4A6-4821-4716-8F65-281E2A2C672C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ble.net-android", "src\ble.net-android\ble.net-android.csproj", "{56707817-AC81-4B7A-B86C-42AB477AA872}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{48788CDA-AD31-4D16-BA67-831D0F6897F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48788CDA-AD31-4D16-BA67-831D0F6897F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48788CDA-AD31-4D16-BA67-831D0F6897F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48788CDA-AD31-4D16-BA67-831D0F6897F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B912B4A6-4821-4716-8F65-281E2A2C672C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B912B4A6-4821-4716-8F65-281E2A2C672C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B912B4A6-4821-4716-8F65-281E2A2C672C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B912B4A6-4821-4716-8F65-281E2A2C672C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56707817-AC81-4B7A-B86C-42AB477AA872}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56707817-AC81-4B7A-B86C-42AB477AA872}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56707817-AC81-4B7A-B86C-42AB477AA872}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56707817-AC81-4B7A-B86C-42AB477AA872}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

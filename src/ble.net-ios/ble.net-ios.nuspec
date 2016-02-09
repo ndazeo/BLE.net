@@ -1,0 +1,27 @@
+﻿<?xml version="1.0"?>
+
+<package>
+   <metadata>
+      <id>ble.net-ios</id>
+      <version>0.1.0</version>
+      <authors>nexussays</authors>
+      <owners></owners>
+      <description>iOS implementation of BLE.net, a Bluetooth Low Energy library</description>
+      <releaseNotes></releaseNotes>
+      <summary></summary>
+      <language>en-US</language>
+      <projectUrl>https://github.com/nexussays/BLE.net</projectUrl>
+      <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
+      <requireLicenseAcceptance>false</requireLicenseAcceptance>
+      <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+      <copyright>Copyright HigherGround LLC</copyright>
+      <dependencies>
+         <dependency id="ble.net"
+                     version="0.1.0" />
+         <dependency id="nexus.core.logging"
+                     version="0.11.2" />
+      </dependencies>
+      <references></references>
+      <tags></tags>
+   </metadata>
+</package>
