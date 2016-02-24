@@ -7,11 +7,20 @@ namespace bluetooth.ble
    /// <see cref="IBluetoothLowEnergyAdapter" /> is scanning.
    /// </summary>
    public interface IBluetoothLowEnergyPeripheral : IBluetoothIdentifier
-      // TODO: is the identifier really a GUID? it should be the MAC address of the device, no?
    {
       Byte[] Advertisement { get; }
 
+      /// <summary>
+      /// The Id is just <see cref="Address"/> in Guid form
+      /// </summary>
+      new Guid Id { get; }
+
       String Name { get; }
+
+      /// <summary>
+      /// MAC address of this device
+      /// </summary>
+      //Byte[] Address { get; }
 
       /// <summary>
       /// Received Signal Strenth Indicator in decibels

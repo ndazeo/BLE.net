@@ -33,16 +33,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="JetBrains.Annotations.PCL328">
+      <HintPath>..\..\lib\packages\JetBrains.Annotations.10.0.0\lib\portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\JetBrains.Annotations.PCL328.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
     <Reference Include="nexus.core, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\packages\nexus.core.0.11.3\lib\portable-net45+win+MonoAndroid10+xamarinios10+MonoTouch10\nexus.core.dll</HintPath>
+      <HintPath>..\..\lib\packages\nexus.core.0.12.1\lib\portable-net45+win+MonoAndroid10+xamarinios10+MonoTouch10\nexus.core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="nexus.core.logging, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\packages\nexus.core.logging.0.11.3\lib\portable-net45+win+MonoAndroid10+xamarinios10+MonoTouch10\nexus.core.logging.dll</HintPath>
+      <HintPath>..\..\lib\packages\nexus.core.logging.0.11.5\lib\portable-net45+win+MonoAndroid10+xamarinios10+MonoTouch10\nexus.core.logging.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
