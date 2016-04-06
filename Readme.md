@@ -1,4 +1,4 @@
-# Bluetooth Low Energy PCL [![Build status](https://img.shields.io/appveyor/ci/nexussays/ble.net.svg?style=flat-square)](https://ci.appveyor.com/project/nexussays/BLE.net) [![NuGet](https://img.shields.io/nuget/v/ble.net.svg?style=flat-square)](https://www.nuget.org/packages/ble.net) [![Apache 2.0 License](https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat-square)](http://www.apache.org/licenses/LICENSE-2.0)
+# Bluetooth Low Energy PCL [![Build status](https://img.shields.io/appveyor/ci/nexussays/ble-net.svg?style=flat-square)](https://ci.appveyor.com/project/nexussays/ble-net) [![NuGet](https://img.shields.io/nuget/v/ble.net.svg?style=flat-square)](https://www.nuget.org/packages/ble.net) [![Apache 2.0 License](https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat-square)](http://www.apache.org/licenses/LICENSE-2.0)
 
 Cross-platform (Android & iOS) Bluetooth Low Energy library for .NET/Xamarin
 
