@@ -6,12 +6,12 @@ Cross-platform (Android & iOS) Bluetooth Low Energy library for .NET/Xamarin
 
 There are packages available for Android, and iOS (as well as the shared PCL if you'd like to implement another platform)
 
-[![NuGet](https://img.shields.io/nuget/dt/ble.net-android.svg?style=flat-square)](https://www.nuget.org/packages/ble.net-android)
 ```powershell
 Install-Package ble.net-android
 ```
 
-[![NuGet](https://img.shields.io/nuget/dt/ble.net-ios.svg?style=flat-square)](https://www.nuget.org/packages/ble.net-ios)
 ```powershell
 Install-Package ble.net-ios
 ```
+
+You'll need to create an instance of `IBluetoothLowEnergyAdapter` by instantiating `new BluetoothLowEnergyAdapter()` for the respective platform at initialization. Then use that `IBluetoothLowEnergyAdapter` throughout your code as needed to scan for and connect to peripherals, etc.
